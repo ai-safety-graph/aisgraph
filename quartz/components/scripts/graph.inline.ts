@@ -169,7 +169,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     .force("collide", forceCollide<NodeData>((n) => nodeRadius(n)).iterations(3))
 
   const width = graph.offsetWidth
-  const height = Math.max(graph.offsetHeight, 250)
+  const height = Math.max(graph.offsetHeight, 650)
 
   // precompute style prop strings as pixi doesn't support css variables
   const cssVars = [
@@ -202,11 +202,12 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     }
   }
 
+  // increasing the num in return increases node radius
   function nodeRadius(d: NodeData) {
     const numLinks = graphData.links.filter(
       (l) => l.source.id === d.id || l.target.id === d.id,
     ).length
-    return 2 + Math.sqrt(numLinks)
+    return 20 + Math.sqrt(numLinks)
   }
 
   let hoveredNodeId: string | null = null

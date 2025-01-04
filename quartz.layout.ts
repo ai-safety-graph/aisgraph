@@ -22,31 +22,33 @@ export const defaultContentPageLayout: PageLayout = {
     // Component.ContentMeta(),
     // Component.TagList(),
     Component.Graph({
-      localGraph: {
+      localGraph: { // THIS is the default graph - not the full screen
         drag: true, // whether to allow panning the view around
         zoom: true, // whether to allow zooming in and out
         depth: 2, // how many hops of notes to display
-        scale: 1, // default view scale
-        repelForce: 0.15, // how much nodes should repel each other
-        centerForce: 1, // how much force to use when trying to center the nodes
-        linkDistance: 100, // how long should the links be by default?
-        fontSize: 0.4, // what size should the node labels be?
-        opacityScale: 10, // how quickly do we fade out the labels when zooming out?
+        scale: 1.5, // default view scale
+        repelForce: 0.8, // how much nodes should repel each other
+        centerForce: 0.4, // how much force to use when trying to center the nodes
+        linkDistance: 80, // how long should the links be by default?
+        fontSize: 0.8, // what size should the node labels be?
+        opacityScale: 1, // how quickly do we fade out the labels when zooming out?
         removeTags: [], // what tags to remove from the graph
         showTags: true, // whether to show tags in the graph
+        focusOnHover: true,
       },
       globalGraph: {
         drag: true, // whether to allow panning the view around
         zoom: true, // whether to allow zooming in and out
-        depth: 2, // how many hops of notes to display
+        depth: 3, // how many hops of notes to display
         scale: 1, // default view scale
-        repelForce: 0.15, // how much nodes should repel each other
-        centerForce: 1, // how much force to use when trying to center the nodes
-        linkDistance: 100, // how long should the links be by default?
-        fontSize: 0.4, // what size should the node labels be?
-        opacityScale: 10, // how quickly do we fade out the labels when zooming out?
+        repelForce: 0.6, // how much nodes should repel each other
+        centerForce: 0.4, // how much force to use when trying to center the nodes
+        linkDistance: 80, // how long should the links be by default?
+        fontSize: 0.8, // what size should the node labels be?
+        opacityScale: 1, // how quickly do we fade out the labels when zooming out?
         removeTags: [], // what tags to remove from the graph
         showTags: true, // whether to show tags in the graph
+        focusOnHover: true,
       },
     }),
   ],
@@ -59,13 +61,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
 
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    // Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    // Component.Graph(),
+    // Component.DesktopOnly(Component.TableOfContents()),
+    // Component.Backlinks(),
   ],
 }
 
