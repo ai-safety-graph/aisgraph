@@ -7,7 +7,7 @@
  */
 $breakpoints: (
   mobile: 800px,
-  desktop: 12000px,
+  desktop: 12000px, // over 10k in desktop view puts right component under body
 );
 
 $mobile: "(max-width: #{map-get($breakpoints, mobile)})";
