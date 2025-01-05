@@ -48,7 +48,7 @@ export default {
     },
     search: {
       title: "Search",
-      searchBarPlaceholder: "Search for something",
+      searchBarPlaceholder: "Search for something, e.g. AI ethics, or Theoretical foundations of AI or ...",
     },
     tableOfContents: {
       title: "Table of Contents",
@@ -70,7 +70,7 @@ export default {
     folderContent: {
       folder: "Folder",
       itemsUnderFolder: ({ count }) =>
-        count === 1 ? "1 item under this folder." : `${count} items under this folder.`,
+        count === 1 ? "1 item under this sub-topic." : `${count} items under this sub-topic.`,
     },
     tagContent: {
       tag: "Tag",

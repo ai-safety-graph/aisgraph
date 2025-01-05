@@ -17,10 +17,7 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    // Component.Breadcrumbs(),
     Component.ArticleTitle(),
-    // Component.ContentMeta(),
-    // Component.TagList(),
     Component.Graph({
       localGraph: { // THIS is the default graph - not the full screen
         drag: true, // whether to allow panning the view around
@@ -66,9 +63,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
   right: [
-    // Component.Graph(),
-    // Component.DesktopOnly(Component.TableOfContents()),
-    // Component.Backlinks(),
+
   ],
 }
 

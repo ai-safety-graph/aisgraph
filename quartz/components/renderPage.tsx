@@ -262,10 +262,17 @@ export function renderPage(
                   </div>
                 </div>
                 <Content {...componentData} />
+                {/* <hr />
+                <div class="page-footer">
+                  {afterBody.map((BodyComponent) => (
+                    <BodyComponent {...componentData} />
+                ))}
+                </div> */}
               </div>
-              {RightComponent}
+              {/* {RightComponent} */}
+              <Footer {...componentData} />
             </Body>
-            <Footer {...componentData} />
+            
           </div>
       )}
       </body>
@@ -302,7 +309,7 @@ export function renderPage(
   //               ))}
   //             </div>
   //           </div>
-  //           {RightComponent}
+  //           {/* {RightComponent} */}
   //           <Footer {...componentData} />
   //         </Body>
   //       </div>
