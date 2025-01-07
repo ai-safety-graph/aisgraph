@@ -75,6 +75,20 @@ export default (() => {
             </div>
             <div class="right">
               <GraphComponent {...componentData} />
+              <div class="graph-legend" style='display: flex; gap: 10px; justify-content: end;'>
+                <div style='display: flex; align-items: center; gap: 3px;'>
+                <div style='border: 1px, solid, #84a59d; width: 20px; height: 20px; border-radius: 50%; background-color: #84a59d;'></div>
+                <p>Previously Visited</p>
+                </div>
+                <div style='display: flex; align-items: center; gap: 3px'>
+                <div style='border: 1px, solid, gray; width: 20px; height: 20px; border-radius: 50%; background-color: gray;'></div>
+                <p>Not yet visited</p>
+                </div>
+                <div style='display: flex; align-items: center; gap: 3px'>
+                <div style='border: 1px, solid, #284b63; width: 20px; height: 20px; border-radius: 50%; background-color: #284b63'></div>
+                <p>Current Page</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
