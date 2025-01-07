@@ -1,5 +1,3 @@
-// BUG: VM82173:1 Uncaught SyntaxError: Identifier 'socket' has already been declared
-
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import landingStyle from "./styles/landing.scss"
 import Search from "./Search"
@@ -46,8 +44,6 @@ export default (() => {
   const FooterComponent = Footer()
   const DarkmodeComponent = Darkmode()
 
-  // Style SearchComponent
-  // SearchComponent.css = searchComponentStyle
   function Landing(componentData: QuartzComponentProps) {
     return (
       <>
@@ -75,10 +71,10 @@ export default (() => {
             </div>
             <div class="right">
               <GraphComponent {...componentData} />
-              <div class="graph-legend" style='display: flex; gap: 10px; justify-content: end;'>
+              <div class="graph-legend" style='display: flex; gap: 10px; justify-content: end; margin-top: 10px'>
                 <div style='display: flex; align-items: center; gap: 3px;'>
                 <div style='border: 1px, solid, #84a59d; width: 20px; height: 20px; border-radius: 50%; background-color: #84a59d;'></div>
-                <p>Previously Visited</p>
+                <p>Previously visited</p>
                 </div>
                 <div style='display: flex; align-items: center; gap: 3px'>
                 <div style='border: 1px, solid, gray; width: 20px; height: 20px; border-radius: 50%; background-color: gray;'></div>
@@ -199,7 +195,7 @@ export default (() => {
             <div class="get-started">
               <a href="/home">
                 <div class="get-started-button">
-                  <p>Get started!</p>
+                  <p>Start Here</p>
                 </div>
               </a>
             </div>
@@ -242,15 +238,3 @@ export default (() => {
   Landing.css = landingStyle
   return Landing
 }) satisfies QuartzComponentConstructor
-
-// I need this component to abide to the theme rules of the quartz build.
-// If possible remove 'graph view' from graph
-// Center align 'left' content of hero
-// Add Icon links
-// Add footer
-// Adjust Graph configs
-// To style the search bar via css rules specific to this page only.
-// Maybe sticky search section to top of page
-// Dark mode toggle between pages when coming from landing page.
-
-// Add this effect https://www.fffuel.co/svg-spinner/ to content section: 'making connections'

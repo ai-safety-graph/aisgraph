@@ -10,7 +10,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "AI Safety Research Compass",
     pageTitleSuffix: "",
-    enableSPA: true,
+    enableSPA: false, // https://quartz.jzhao.xyz/advanced/architecture point 3. under 'On the client'
     enablePopovers: true,
     analytics: {
       provider: "plausible",
