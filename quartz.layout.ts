@@ -19,7 +19,8 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
     Component.Graph({
-      localGraph: { // THIS is the default graph - not the full screen
+      localGraph: {
+        // THIS is the default graph - not the full screen
         drag: true, // whether to allow panning the view around
         zoom: true, // whether to allow zooming in and out
         depth: 2, // how many hops of notes to display
@@ -62,9 +63,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
-  right: [
-
-  ],
+  right: [],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)

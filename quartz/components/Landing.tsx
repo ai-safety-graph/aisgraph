@@ -63,7 +63,7 @@ export default (() => {
           <div class="container hero-content">
             <div class="left">
               <div class="left-container">
-                <h2>Plan your Research on AI Safety</h2>
+                <h2>Conduct your Research on AI Safety</h2>
                 <p>Dive into the dynamic world of AI Safety Research with our interactive tool!</p>
                 <p> Our platform is designed to make navigating the complex landscape of AI alignment easier and more intuitive for everyone—from newcomers to seasoned researchers.</p>
                 <p>Explore the relationships between various topics and subtopics in AI alignment through a visually engaging and interactive graph.</p>
@@ -86,6 +86,16 @@ export default (() => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class='content'>
+          <div class="content-container">
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>400 Topics and Counting...</h2>
+            <p>From a dataset of Arxiv sources, we have connected over 400 topics on AI safety to create an interactive graph which you can traverse visually. We're continuously adding research from more sources using APIs and scraping methods; our aim is to create the most informed and accesible hub for AI safety.</p>
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>Navigating the Site</h2>
+            <p>The graph is fully interactive where each node represents a topic on AI Safety. You can zoom in and out by scrolling over the graph and drag and drop nodes to rearrange the paths for clearer viewing. Clicking on a node will take you to that topic's page where you can continue using the graph or use the associated links to continue researching.</p>
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>Beginner Friendly</h2>
+            <p>We believe it's important to expose the critical information surrounding AI safety so we've designed this application with a focus on accessibility and inclusivity. You will find a few good starting points if you're new to the world of AI Safety below. We also strongly encourage users to reach out to us if they have any questions or suggestions regarding the usage of this application.</p>
           </div>
         </section>
         <section class="search-content">
@@ -191,15 +201,16 @@ export default (() => {
         </section>
         <section class="jump-to-basics-content">
           <div class="container">
-            <h2>New to AI Safety? Jump to the basics</h2>
+            <h2>What is AI Safety?</h2>
             <div class="get-started">
               <a href="/home">
                 <div class="get-started-button">
-                  <p>Start Here</p>
+                  <p>Learn Here</p>
                 </div>
               </a>
             </div>
           </div>
+          <img src="../static/medicine-crosses.svg" alt="" />
         </section>
         <section class="about">
           <div class='container'>

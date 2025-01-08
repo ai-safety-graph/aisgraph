@@ -48,7 +48,7 @@ export default {
     },
     search: {
       title: "Search",
-      searchBarPlaceholder: "Search for something, e.g. AI ethics, or Theoretical foundations of AI or ...",
+      searchBarPlaceholder: "Search for something, e.g. AI ethics",
     },
     tableOfContents: {
       title: "Table of Contents",
