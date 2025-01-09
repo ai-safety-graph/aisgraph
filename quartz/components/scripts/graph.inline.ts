@@ -379,9 +379,11 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       alpha: 0,
       anchor: { x: 0.5, y: 1.2 },
       style: {
-        fontSize: fontSize * 15,
+        fontSize: fontSize * 25,
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
+        stroke: "#ffffff", // The next two lines add a white outline to the text, however they throw a typescript error. Functional for now.
+        strokeThickness: 3,
       },
       resolution: window.devicePixelRatio * 4,
     })
