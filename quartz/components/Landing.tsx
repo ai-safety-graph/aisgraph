@@ -93,9 +93,9 @@ export default (() => {
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>400 Topics and Counting...</h2>
             <p>From a dataset of Arxiv sources, we have connected over 400 topics on AI safety to create an interactive graph which you can traverse visually. We're continuously adding research from more sources using APIs and scraping methods; our aim is to create the most informed and accesible hub for AI safety.</p>
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>Navigating the Site</h2>
-            <p>The graph is fully interactive where each node represents a topic on AI Safety. You can zoom in and out by scrolling over the graph and drag and drop nodes to rearrange the paths for clearer viewing. Clicking on a node will take you to that topic's page where you can continue using the graph or use the associated links to continue researching.</p>
+            <p>The graph is fully interactive where each node represents a topic on AI Safety. You can zoom in and out by scrolling over the graph, and drag and drop nodes to rearrange the paths for clearer viewing. Clicking on a node will take you to that topic's page where you can continue using the graph or use the associated links to make connections and expand your understanding.</p>
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>Beginner Friendly</h2>
-            <p>We believe it's important to expose the critical information surrounding AI safety so we've designed this application with a focus on accessibility and inclusivity. You will find a few good starting points if you're new to the world of AI Safety below. We also strongly encourage users to reach out to us if they have any questions or suggestions regarding the usage of this application.</p>
+            <p>We believe it's important to expose the critical information surrounding AI safety so we've designed this application with a focus on accessibility and inclusivity. If you're new to the world of AI Safety, you can find a few good starting points as well as an introduction to AI Safety below. We also strongly encourage users to reach out to us if they have any questions or suggestions regarding the usage of this application.</p>
           </div>
         </section>
         <section class="search-content">
@@ -211,6 +211,15 @@ export default (() => {
             </div>
           </div>
           <img src="../static/medicine-crosses.svg" alt="" />
+        </section>
+        <section class="feedback">
+          <div class="content-container narrow" style='padding-top: 50px; display: flex; flex-direction: column;'>
+          <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>We value your feedback</h2>
+          <p>AI Safety Compass is a work in progress and we would love to hear from you during any stage of development. We appreciate all kinds of feedback so please don't hesitate to reach out to us here: <span style='color: #23d5ab'>info.aicompass@gmail.com</span></p>
+          <a style="display: inline-block;" href="mailto:info.aicompass@gmail.com?subject=AI%20Safety%20Compass%20Feedback&body=Hi%20Team,%0A%0AHere%20is%20my%20feedback%20for%20the%20app:%0A%0ARating%20(1-5):%0A%0AComments:%0A%0A%5BWrite%20your%20feedback%20here%5D%0A%0AThank%20you!">
+            <div class="get-started-button" style='border-color: #23d5ab; margin-top: 10px; justify-self: end;'>
+          <p style='color: #23d5ab;'>Send Feedback</p></div></a>
+          </div>
         </section>
         <section class="about">
           <div class='container'>
