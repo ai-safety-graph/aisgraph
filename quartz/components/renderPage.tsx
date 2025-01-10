@@ -243,8 +243,8 @@ export function renderPage(
     <html lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
-      {slug === "index" && <LandingComponent {...componentData} />}
-      {slug !== "index" && (
+        {slug === "index" && <LandingComponent {...componentData} />}
+        {slug !== "index" && (
           <div id="quartz-root" className="page">
             <Body {...componentData}>
               {LeftComponent}
@@ -252,33 +252,33 @@ export function renderPage(
                 <div className="page-header">
                   <Header {...componentData}>
                     {header.map((HeaderComponent) => (
-                        <HeaderComponent {...componentData} />
+                      <HeaderComponent {...componentData} />
                     ))}
                   </Header>
                   <div className="popover-hint">
                     {beforeBody.map((BodyComponent) => (
-                        <BodyComponent {...componentData} />
+                      <BodyComponent {...componentData} />
                     ))}
                   </div>
                 </div>
                 <Content {...componentData} />
-                {/* <hr />
+                <hr />
                 <div class="page-footer">
                   {afterBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
                 ))}
-                </div> */}
+                </div>
               </div>
               {/* {RightComponent} */}
               <Footer {...componentData} />
             </Body>
-            
+
           </div>
-      )}
+        )}
       </body>
       {pageResources.js
-          .filter((resource) => resource.loadTime === "afterDOMReady")
-          .map((res) => JSResourceToScriptElement(res))}
+        .filter((resource) => resource.loadTime === "afterDOMReady")
+        .map((res) => JSResourceToScriptElement(res))}
     </html>
   )
   // const doc = (

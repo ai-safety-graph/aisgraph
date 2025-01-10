@@ -183,7 +183,7 @@ export default (() => {
           <div class="container">
             <h2>New to AI Safety? Jump to the basics</h2>
             <div class="get-started">
-              <a href="/home">
+              <a href="/basics"> 
                 <div class="get-started-button">
                   <p>Get started!</p>
                 </div>
