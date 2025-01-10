@@ -91,7 +91,7 @@ export default (() => {
         <section class='content'>
           <div class="content-container">
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>400 Topics and Counting...</h2>
-            <p>From a dataset of Arxiv sources, we have connected over 400 topics on AI safety to create an interactive graph which you can traverse visually. We're continuously adding research from more sources using APIs and scraping methods; our aim is to create the most informed and accesible hub for AI safety.</p>
+            <p>From a <a style="color: #23d5ab" href="https://github.com/moirage/alignment-research-dataset" target="_blank">dataset</a> of Arxiv sources, we have connected over 400 topics on AI safety to create an interactive graph which you can traverse visually. We're continuously adding research from more sources using APIs and scraping methods; our aim is to create the most informed and accessible, dynamically updated hub for AI safety research.</p>
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>Navigating the Site</h2>
             <p>The graph is fully interactive where each node represents a topic on AI Safety. You can zoom in and out by scrolling over the graph, and drag and drop nodes to rearrange the paths for clearer viewing. Clicking on a node will take you to that topic's page where you can continue using the graph or use the associated links to make connections and expand your understanding.</p>
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>Beginner Friendly</h2>
