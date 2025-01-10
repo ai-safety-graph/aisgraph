@@ -382,8 +382,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         fontSize: fontSize * 25,
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
-        stroke: "#ffffff", // The next two lines add a white outline to the text, however they throw a typescript error. Functional for now.
-        strokeThickness: 3,
+        stroke: "#ffffff",
+        strokeThickness: 3, // This line throws a deprecation error. Functional for now.
       },
       resolution: window.devicePixelRatio * 4,
     })

@@ -215,10 +215,11 @@ export default (() => {
         <section class="feedback">
           <div class="content-container narrow" style='padding-top: 50px; display: flex; flex-direction: column;'>
           <h2 style='border-left: solid 3px #23d5c0; padding-left: 5px; font-size: 1.5rem;'>We value your feedback</h2>
-          <p>AI Safety Compass is a work in progress and we would love to hear from you during any stage of development. We appreciate all kinds of feedback so please don't hesitate to reach out to us here: <span style='color: #23d5ab'>info.aicompass@gmail.com</span></p>
-          <a style="width: fit-content; align-self: center;" href="mailto:info.aicompass@gmail.com?subject=AI%20Safety%20Compass%20Feedback&body=Hi%20Team,%0A%0AHere%20is%20my%20feedback%20for%20the%20app:%0A%0ARating%20(1-5):%0A%0AComments:%0A%0A%5BWrite%20your%20feedback%20here%5D%0A%0AThank%20you!">
+          <p>AI Safety Compass is a work in progress and we would love to hear from you during any stage of development. We appreciate all kinds of feedback so please don't hesitate to reach out to us here: <a style="text-decoration: none; color: #23d5ab"href="mailto:info.aicompass@gmail.com?subject=AI%20Safety%20Compass%20Feedback&body=Hi%20Team,%0A%0AHere%20is%20my%20feedback%20for%20the%20app:%0A%0ARating%20(1-5):%0A%0AComments:%0A%0A%5BWrite%20your%20feedback%20here%5D%0A%0AThank%20you!">info.aicompass@gmail.com</a></p>
+          <a style="width: fit-content; align-self: center;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc3M7jUr1cmcBUn1wMlHgOFtEs96H1LbHkBgJ58Q3xlnSY_Qw/viewform?usp=header">
             <div class="get-started-button" style='border-color: #23d5ab; margin-top: 30px;'>
-          <p style='color: #23d5ab;'>Send Feedback</p></div></a>
+          <p style='color: #23d5ab;'>Feedback Form</p></div></a>
+          {/* <iframe style="align-self: center"src="https://docs.google.com/forms/d/e/1FAIpQLSc3M7jUr1cmcBUn1wMlHgOFtEs96H1LbHkBgJ58Q3xlnSY_Qw/viewform?embedded=true" width="640" height="2008" frameborder="0">Loading…</iframe> */}
           </div>
         </section>
         <section>
