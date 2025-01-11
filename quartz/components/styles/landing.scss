@@ -9,8 +9,23 @@ body {
   line-height: 1.6;
 }
 
-.navbar {
+.content-container {
+  max-width: 1150px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 50px 0;
 
+  &.narrow {
+    max-width: 940px;
+  }
+  &.narrow-post {
+    max-width: 700px;
+  }
+}
+
+.navbar {
   .container {
     display: flex;
     justify-content: space-between;
@@ -120,9 +135,10 @@ body {
 
 .jump-to-basics-content {
   padding: 2rem 0;
-  background: radial-gradient(#cfd523, #23d5c0, #00A36C);
+  background: radial-gradient(#23a6d5, #23d5c0, #00A36C);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  position: relative;
 
   .container {
     max-width: 1200px;
@@ -143,6 +159,14 @@ body {
 
   p {
     font-size: 1.1rem;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 20;
+    height: 250px;
+    width: auto;
   }
 }
 
@@ -187,7 +211,7 @@ body {
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     margin-top: 3rem;
     text-align: center;
@@ -202,24 +226,16 @@ body {
   display: flex;
   padding: 20px;
   border-radius: 10px;
-  border: solid 1px black;
+  border: solid 1px white;
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: box-shadow 0.3s;
-  background-color: white;
-  // background-blend-mode: gray;
+  background-color: transparent;
 
 
   p {
     font-size: 1.2rem;
     font-weight: 300;
-    color: black;
-  }
-
-  &:hover {
-    box-shadow: 2px 2px 2px #0077a3 !important;
-    border-width: 2px !important;
     color: white;
   }
 }
@@ -236,7 +252,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: box-shadow 0.3s;
 
 
   p {
@@ -245,8 +260,7 @@ body {
   }
 
   &:hover {
-    box-shadow: 2px 2px 2px #00A36C !important;
-    border-width: 2px !important;
+    border-width: 1.7px !important;
   }
 }
 
@@ -256,50 +270,6 @@ body {
   justify-content: space-around;
   min-width: 100%;
   margin-bottom: 2rem;
-}
-
-.about {
-  padding: 3rem 0;
-  width: 100%;
-
-  .container {
-    max-width: 1075px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  h3 {
-    font-weight: 500;
-    font-size: 1.8rem;
-  }
-
-  ;
-
-  .left {
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-  }
-
-  .right {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: baseline;
-  }
-
-  .icon-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-width: 175px;
-  }
-
-
 }
 
 .footer {

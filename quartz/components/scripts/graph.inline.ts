@@ -379,9 +379,11 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
       alpha: 0,
       anchor: { x: 0.5, y: 1.2 },
       style: {
-        fontSize: fontSize * 15,
+        fontSize: fontSize * 25,
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
+        stroke: "#ffffff",
+        strokeThickness: 3, // This line throws a deprecation error. Functional for now.
       },
       resolution: window.devicePixelRatio * 4,
     })
