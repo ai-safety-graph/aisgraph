@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "AI Safety Research Compass",
+    pageTitle: "AI Safety Graph",
     pageTitleSuffix: "",
     enableSPA: false, // https://quartz.jzhao.xyz/advanced/architecture point 3. under 'On the client'
     enablePopovers: true,

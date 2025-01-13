@@ -382,8 +382,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         fontSize: fontSize * 25,
         fill: computedStyleMap["--dark"],
         fontFamily: computedStyleMap["--bodyFont"],
-        stroke: "#ffffff",
-        strokeThickness: 3, // This line throws a deprecation error. Functional for now.
+        stroke: "#B2BEB5",
+        // strokeThickness: 3, // This line throws a deprecation error. Functional for now.
       },
       resolution: window.devicePixelRatio * 4,
     })

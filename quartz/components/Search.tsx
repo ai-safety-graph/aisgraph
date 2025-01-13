@@ -17,7 +17,7 @@ export default ((userOpts?: Partial<SearchOptions>) => {
   const Search: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     const opts = { ...defaultOptions, ...userOpts }
     // const searchPlaceholder = i18n(cfg.locale).components.search.searchBarPlaceholder
-    const searchPlaceholder = "search by keywords, paper title, DOI or another identifier"
+    const searchPlaceholder = "Search by keywords, paper title, DOI or another identifier"
     // const searchButtonText = i18n(cfg.locale).components.search.title
     const searchButtonText = "Search Graph"
     return (

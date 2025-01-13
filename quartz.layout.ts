@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/ai-safety-graph/AISafetyGraph",
+      "Discord Community": "https://discord.gg/skqQ8y4quR",
     },
   }),
 }
@@ -17,7 +17,7 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ArticleTitle(),
+    // Component.ArticleTitle(), // off for now 
     Component.Graph({
       localGraph: {
         // THIS is the default graph - not the full screen
@@ -29,7 +29,7 @@ export const defaultContentPageLayout: PageLayout = {
         centerForce: 0.4, // how much force to use when trying to center the nodes
         linkDistance: 80, // how long should the links be by default?
         fontSize: 0.8, // what size should the node labels be?
-        opacityScale: 1, // how quickly do we fade out the labels when zooming out?
+        opacityScale: 10, // how quickly do we fade out the labels when zooming out?
         removeTags: [], // what tags to remove from the graph
         showTags: true, // whether to show tags in the graph
         focusOnHover: true,
@@ -41,7 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
         scale: 1, // default view scale
         repelForce: 0.6, // how much nodes should repel each other
         centerForce: 0.4, // how much force to use when trying to center the nodes
-        linkDistance: 80, // how long should the links be by default?
+        linkDistance: 180, // how long should the links be by default?
         fontSize: 0.8, // what size should the node labels be?
         opacityScale: 1, // how quickly do we fade out the labels when zooming out?
         removeTags: [], // what tags to remove from the graph
