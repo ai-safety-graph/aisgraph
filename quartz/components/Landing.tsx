@@ -260,7 +260,7 @@ export default (() => {
           <img src="../static/medicine-crosses.svg" alt="" />
         </section>
         <section style="display: flex; justify-content: space-between; padding: 4rem 2rem;">
-          <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); margin-right: 2rem;">
+          <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px; margin-right: 2rem;">
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 15px; font-size: 1.8rem; margin-bottom: 1.5rem;'>We value your feedback</h2>
             <p style="line-height: 1.6;">AI Research Graph is a work in progress and we would love to hear from you during any stage of development. We appreciate all kinds of feedback so please don't hesitate to 
               </p> 
@@ -270,7 +270,7 @@ export default (() => {
               </div>
             </a>
           </div>
-          <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px; box-shadow: 0 2px 15px rgba(0,0,0,0.05);">
+          <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px;">
             <div style="display: flex; flex-direction: column; align-items: center;">
               <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Join our Community</h2>
               <div style="display: flex; gap: 25px; justify-content: center; margin-top: 20px;">

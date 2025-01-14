@@ -3,5 +3,6 @@
 // put your custom CSS here!
 
 .themed-card {
-  background-color: var(--light)
+  background-color: var(--light);
+  box-shadow: 0 1px 7px var(--lightgray);
 }
