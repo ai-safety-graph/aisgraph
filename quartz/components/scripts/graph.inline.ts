@@ -207,7 +207,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     const numLinks = graphData.links.filter(
       (l) => l.source.id === d.id || l.target.id === d.id,
     ).length
-    return 20 + Math.sqrt(numLinks)
+    return 3 + Math.sqrt(numLinks)
   }
 
   let hoveredNodeId: string | null = null
@@ -281,8 +281,9 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     const activeScale = defaultScale * 1.1
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
+      const isActive = nodeId === hoveredNodeId || hoveredNeighbours.has(nodeId)
 
-      if (hoveredNodeId === nodeId) {
+      if (isActive) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
             {
@@ -296,7 +297,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
             {
-              alpha: n.label.alpha,
+              alpha: 0,
               scale: { x: defaultScale, y: defaultScale },
             },
             100,

@@ -12,13 +12,13 @@ export default (() => {
     localGraph: {
       drag: true,  // Disable dragging in the local graph
       zoom: true,
-      depth: 2,     // Increase the depth for the local graph
+      depth: 2.5,     // Increase the depth for the local graph
       scale: 1.5,
       repelForce: 0.8,
       centerForce: 0.4,
-      linkDistance: 50,
+      linkDistance: 25,
       fontSize: 0.8,
-      opacityScale: 10, // high opacity makes node text show with slightest graph interaction
+      opacityScale: 0.9, // high opacity makes node text show with slightest graph interaction
       removeTags: [],
       showTags: true,
       focusOnHover: true,
@@ -26,7 +26,7 @@ export default (() => {
     globalGraph: {
       drag: true,
       zoom: true,
-      depth: 3,     // Set depth for the global graph
+      depth: 4,     // Set depth for the global graph
       scale: 0.8,
       repelForce: 0.6,
       centerForce: 0.4,
