@@ -46,7 +46,7 @@ export default (() => {
 
   function Landing(componentData: QuartzComponentProps) {
     return (
-      <>
+      <div className='landing-page'>
         <nav className="navbar" style={{
           boxShadow: 'var(--shadow)',
           borderBottom: '1px solid var(--lightgray)',
@@ -304,7 +304,7 @@ export default (() => {
             <FooterComponent {...componentData} />
           </div>
         </section>
-      </>
+      </div>
     )
   }
 

@@ -209,7 +209,6 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     ).length
     return 3 + Math.sqrt(numLinks)
   }
-
   let hoveredNodeId: string | null = null
   let hoveredNeighbours: Set<string> = new Set()
   const linkRenderData: LinkRenderData[] = []
@@ -273,6 +272,26 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     })
   }
 
+  function renderInitialLabels() {
+    const currentNode = nodeRenderData[0]
+    const currentNodeId = currentNode.simulationData.id
+    const neighboringNodeIds = new Set(
+      graphData.links
+        .filter((link) => link.source.id === currentNodeId || link.target.id === currentNodeId)
+        .flatMap((link) => [link.source.id, link.target.id]),
+    )
+    for (const n of nodeRenderData) {
+      const nodeId = n.simulationData.id
+
+      if (neighboringNodeIds.has(nodeId)) {
+        n.label.alpha = 1
+
+        const defaultScale = 1 / scale
+        n.label.scale.set(defaultScale)
+      }
+    }
+  }
+
   function renderLabels() {
     tweens.get("label")?.stop()
     const tweenGroup = new TweenGroup()
@@ -282,7 +301,6 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
       const isActive = nodeId === hoveredNodeId || hoveredNeighbours.has(nodeId)
-
       if (isActive) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
@@ -431,6 +449,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
     nodeRenderData.push(nodeRenderDatum)
   }
+
+  renderInitialLabels()
 
   for (const l of graphData.links) {
     const gfx = new Graphics({ interactive: false, eventMode: "none" })
