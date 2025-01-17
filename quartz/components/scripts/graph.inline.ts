@@ -285,7 +285,6 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
 
       if (neighboringNodeIds.has(nodeId)) {
         n.label.alpha = 1
-
         const defaultScale = 1 / scale
         n.label.scale.set(defaultScale)
       }
@@ -300,8 +299,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     const activeScale = defaultScale * 1.1
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
-      const isActive = nodeId === hoveredNodeId || hoveredNeighbours.has(nodeId)
-      if (isActive) {
+      if (hoveredNodeId === nodeId) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
             {
@@ -315,7 +313,7 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
             {
-              alpha: 0,
+              alpha: n.label.alpha,
               scale: { x: defaultScale, y: defaultScale },
             },
             100,
@@ -527,16 +525,17 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
           stage.scale.set(transform.k, transform.k)
           stage.position.set(transform.x, transform.y)
 
+          // Removed for keeping initially rendered labels when zooming/ dragging
           // zoom adjusts opacity of labels too
-          const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
-          const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
+          // const scale = transform.k * opacityScale
+          // let scaleOpacity = Math.max((scale - 1) / 3.75)
+          // const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
-          for (const label of labelsContainer.children) {
-            if (!activeNodes.includes(label)) {
-              label.alpha = scaleOpacity
-            }
-          }
+          // for (const label of labelsContainer.children) {
+          //   if (!activeNodes.includes(label)) {
+          //     label.alpha = scaleOpacity
+          //   }
+          // }
         }),
     )
   }

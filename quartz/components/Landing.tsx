@@ -13,12 +13,12 @@ export default (() => {
       drag: true,  // Disable dragging in the local graph
       zoom: true,
       depth: 2.5,     // Increase the depth for the local graph
-      scale: 1.5,
+      scale: 2.5,
       repelForce: 0.8,
       centerForce: 0.4,
-      linkDistance: 25,
-      fontSize: 0.8,
-      opacityScale: 0.9, // high opacity makes node text show with slightest graph interaction
+      linkDistance: 70,
+      fontSize: 0.9,
+      opacityScale: 0, // high opacity makes node text show with slightest graph interaction
       removeTags: [],
       showTags: true,
       focusOnHover: true,
@@ -32,7 +32,7 @@ export default (() => {
       centerForce: 0.4,
       linkDistance: 50,
       fontSize: 0.6, 
-      opacityScale: 1,
+      opacityScale: 0,
       removeTags: [],
       showTags: true,
       focusOnHover: true,
