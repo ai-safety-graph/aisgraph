@@ -207,9 +207,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     const numLinks = graphData.links.filter(
       (l) => l.source.id === d.id || l.target.id === d.id,
     ).length
-    return 20 + Math.sqrt(numLinks)
+    return 3 + Math.sqrt(numLinks)
   }
-
   let hoveredNodeId: string | null = null
   let hoveredNeighbours: Set<string> = new Set()
   const linkRenderData: LinkRenderData[] = []
@@ -273,6 +272,25 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     })
   }
 
+  function renderInitialLabels() {
+    const currentNode = nodeRenderData[0]
+    const currentNodeId = currentNode.simulationData.id
+    const neighboringNodeIds = new Set(
+      graphData.links
+        .filter((link) => link.source.id === currentNodeId || link.target.id === currentNodeId)
+        .flatMap((link) => [link.source.id, link.target.id]),
+    )
+    for (const n of nodeRenderData) {
+      const nodeId = n.simulationData.id
+
+      if (neighboringNodeIds.has(nodeId)) {
+        n.label.alpha = 1
+        const defaultScale = 1 / scale
+        n.label.scale.set(defaultScale)
+      }
+    }
+  }
+
   function renderLabels() {
     tweens.get("label")?.stop()
     const tweenGroup = new TweenGroup()
@@ -281,7 +299,6 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     const activeScale = defaultScale * 1.1
     for (const n of nodeRenderData) {
       const nodeId = n.simulationData.id
-
       if (hoveredNodeId === nodeId) {
         tweenGroup.add(
           new Tweened<Text>(n.label).to(
@@ -431,6 +448,8 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     nodeRenderData.push(nodeRenderDatum)
   }
 
+  renderInitialLabels()
+
   for (const l of graphData.links) {
     const gfx = new Graphics({ interactive: false, eventMode: "none" })
     linkContainer.addChild(gfx)
@@ -506,16 +525,17 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
           stage.scale.set(transform.k, transform.k)
           stage.position.set(transform.x, transform.y)
 
+          // Removed for keeping initially rendered labels when zooming/ dragging
           // zoom adjusts opacity of labels too
-          const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
-          const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
+          // const scale = transform.k * opacityScale
+          // let scaleOpacity = Math.max((scale - 1) / 3.75)
+          // const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
-          for (const label of labelsContainer.children) {
-            if (!activeNodes.includes(label)) {
-              label.alpha = scaleOpacity
-            }
-          }
+          // for (const label of labelsContainer.children) {
+          //   if (!activeNodes.includes(label)) {
+          //     label.alpha = scaleOpacity
+          //   }
+          // }
         }),
     )
   }
