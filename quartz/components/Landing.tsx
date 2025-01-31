@@ -58,6 +58,13 @@ export default (() => {
           <div class="container">
             <h1 class="logo" style="font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; font-size: 1.5rem; background: linear-gradient(45deg, #284b63, #84a59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI Safety Graph</h1>
             <ul class="nav-links" style="display: flex; align-items: center;">
+            <li>
+            <a style="width: fit-content; display: block;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc3M7jUr1cmcBUn1wMlHgOFtEs96H1LbHkBgJ58Q3xlnSY_Qw/viewform?usp=header">
+            <div class="feedback-button" style='border-color: #23d5ab; transition: all 0.2s; hover: {transform: scale(1.02)};'>
+                <p style='color: #23d5ab; font-weight: 500; font-size: 15px'>Tell Us What You Think!</p>
+              </div>
+              </a>
+              </li>
               <li>
                 <a href="https://github.com/ai-safety-graph/AISafetyGraph" target="_blank" style="display: flex; align-items: center; gap: 5px;">
                   <svg height="24" width="24" viewBox="0 0 16 16" version="1.1" fill="currentColor">

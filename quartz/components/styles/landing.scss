@@ -29,7 +29,6 @@ body {
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -42,7 +41,7 @@ body {
   .nav-links {
     list-style: none;
     display: flex;
-    // align-items: baseline;
+    align-items: baseline;
 
     ul {
       align-items: baseline;
@@ -50,6 +49,24 @@ body {
 
     li {
       margin-left: 1rem;
+    }
+
+    .feedback-button {
+      display: flex;
+      padding: 10px;
+      border-radius: 10px;
+      border: solid 1px white;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: transparent;
+    
+    
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: white;
+      }
     }
   }
 }
@@ -297,34 +314,4 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin2 {
-  0% {
-    stroke-dasharray: 1, 800;
-    stroke-dashoffset: 0;
-  }
-
-  50% {
-    stroke-dasharray: 400, 400;
-    stroke-dashoffset: -200px;
-  }
-
-  100% {
-    stroke-dasharray: 800, 1;
-    stroke-dashoffset: -800px;
-  }
-}
-
-.spin2 {
-  transform-origin: center;
-  animation: spin2 1.5s ease-in-out infinite,
-    spin 2s linear infinite;
-  animation-direction: alternate;
 }
