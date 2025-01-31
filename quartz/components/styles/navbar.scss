@@ -1,0 +1,47 @@
+.navbar {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1400px;
+    height: 80px;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+
+    .feedback-button {
+      display: flex;
+      padding: 10px;
+      border-radius: 10px;
+      border: solid 1px white;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: transparent;
+    
+    
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: white;
+      }
+    }
+
+    ul {
+      align-items: baseline;
+    }
+
+    li {
+      margin-left: 1rem;
+    }
+  }
+}
