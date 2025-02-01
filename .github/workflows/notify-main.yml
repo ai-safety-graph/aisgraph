@@ -12,6 +12,6 @@ jobs:
       - name: Trigger repository dispatch event in main repo
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.MAIN_REPO_PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           repository: ai-safety-graph/AISafetyGraph
           event-type: submodule-updated
