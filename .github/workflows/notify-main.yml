@@ -1,0 +1,17 @@
+name: Notify Main Repo of Submodule Update
+
+on:
+  push:
+    branches:
+      - main  # Change if you track another branch
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger repository dispatch event in main repo
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.MAIN_REPO_PAT }}
+          repository: ai-safety-graph/AISafetyGraph
+          event-type: submodule-updated
