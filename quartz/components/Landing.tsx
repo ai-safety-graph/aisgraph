@@ -11,12 +11,12 @@ export default (() => {
     localGraph: {
       drag: true,  // Disable dragging in the local graph
       zoom: true,
-      depth: 2.5,     // Increase the depth for the local graph
+      depth: 2.1,     // Increase the depth for the local graph
       scale: 2.5,
       repelForce: 0.8,
       centerForce: 0.4,
-      linkDistance: 70,
-      fontSize: 0.9,
+      linkDistance: 120,
+      fontSize: 1.2,
       opacityScale: 0, // high opacity makes node text show with slightest graph interaction
       removeTags: [],
       showTags: true,
@@ -217,14 +217,14 @@ export default (() => {
           <div class="container">
             <h2>What is AI Safety?</h2>
             <div class="get-started">
-              <a href="/basics"> 
+              <a href="basics"> 
                 <div class="get-started-button">
                   <p>Learn Here</p>
                 </div>
               </a>
             </div>
           </div>
-          <img src="../static/medicine-crosses.svg" alt="" />
+          <img src="/static/medicine-crosses.svg" alt="" />
         </section>
         <section style="display: flex; justify-content: space-between; padding: 4rem 2rem;">
           <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px; margin-right: 2rem;">

@@ -8,6 +8,34 @@
     align-items: center;
   }
 
+  .search {
+    min-width: 25rem;
+
+    &>.search-button {
+      border-radius: 10px;
+      height: 3rem;
+      background-color: transparent;
+      border: 2px solid var(--secondary);
+
+      &>p {
+        color: var(--secondary);
+      }
+
+      & svg {
+        cursor: pointer;
+        width: 18px;
+        min-width: 18px;
+        margin: 0 0.5rem;
+
+        .search-path {
+          stroke: var(--secondary);
+          stroke-width: 2px;
+          transition: stroke 0.5s ease;
+        }
+      }
+    }
+  }
+
   .logo {
     font-size: 1rem;
     padding-bottom: 10px;

@@ -1,10 +1,12 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import navbarStyle from "./styles/navbar.scss"
 import Darkmode from "./Darkmode"
+import Search from "./Search"
 
 
 export default(() => {
   const DarkmodeComponent = Darkmode()
+  const SearchComponent = Search()
 
   function Navbar(componentData: QuartzComponentProps) {
     return (
@@ -17,7 +19,11 @@ export default(() => {
         zIndex: 100,
       }}>
         <div class="container">
-          <h1 class="logo" style="font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; font-size: 1.5rem; background: linear-gradient(45deg, #284b63, #84a59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI Safety Graph</h1>
+          <a href="/">
+          <h1 class="logo" style="font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; font-size: 1.5rem; background: linear-gradient(45deg, #284b63, #84a59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI Safety Graph</h1></a>
+          {/* <div class="nav-search" style="min-width: 400px; max-width: 500px"> */}
+          <SearchComponent {...componentData}/>
+          {/* </div> */}
           <ul class="nav-links" style="display: flex; align-items: center;">
           <li>
           <a style="width: fit-content; display: block;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc3M7jUr1cmcBUn1wMlHgOFtEs96H1LbHkBgJ58Q3xlnSY_Qw/viewform?usp=header">
