@@ -269,3 +269,24 @@ body {
     background-position: 0% 50%;
   }
 }
+
+
+@media (max-width: 800px) {
+  .jump-to-basics-content {
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 20;
+      height: 100px;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .feedback-section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+  }
+}
