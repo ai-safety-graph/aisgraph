@@ -19,7 +19,7 @@ export default(() => {
         zIndex: 100,
       }}>
         <div class="container">
-          <a href="/">
+          <a href="/AISafetyGraph">
           <h1 class="logo" style="font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; font-size: 1.5rem; background: linear-gradient(45deg, #284b63, #84a59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI Safety Graph</h1></a>
           {/* <div class="nav-search" style="min-width: 400px; max-width: 500px"> */}
           <SearchComponent {...componentData}/>

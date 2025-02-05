@@ -8,6 +8,11 @@
     align-items: center;
   }
 
+  .logo {
+    margin-left: 10px;
+    text-wrap: nowrap;
+  }
+
   .search {
     min-width: 11rem;
     width: 400px;
@@ -85,15 +90,15 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .navbar {
     .nav-links {
       .nav-link-text {
         display: none;
       }
     }
-    .logo {
-      display: none;
-    }
+    // .logo {
+    //   display: none;
+    // }
   }
 }
