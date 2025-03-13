@@ -55,17 +55,17 @@ export default (() => {
             </p>
             <div style="width: 100%; max-width: 900px;">
               <GraphComponent {...componentData} />
-              <div class="graph-legend" style='display: flex; gap: 20px; justify-content: center; margin-top: 15px'>
-                <div style='display: flex; align-items: center; gap: 5px;'>
-                  <div style='border: 1px solid #84a59d; width: 12px; height: 12px; border-radius: 50%; background-color: #84a59d;'></div>
+              <div class="legend">
+                <div class="node-container">
+                  <div class="legend-node node-1"></div>
                   <p style="font-size: 0.9rem;">Previously visited</p>
                 </div>
-                <div style='display: flex; align-items: center; gap: 5px'>
-                  <div style='border: 1px solid gray; width: 12px; height: 12px; border-radius: 50%; background-color: gray;'></div>
+                <div class="node-container">
+                  <div class="legend-node node-2"></div>
                   <p style="font-size: 0.9rem;">Not yet visited</p>
                 </div>
-                <div style='display: flex; align-items: center; gap: 5px'>
-                  <div style='border: 1px solid #284b63; width: 12px; height: 12px; border-radius: 50%; background-color: #284b63'></div>
+                <div class="node-container">
+                  <div class="legend-node node-3"></div>
                   <p style="font-size: 0.9rem;">Current Page</p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default (() => {
           <div class="container">
             <h2>Search through hundreds of research papers on AI Safety</h2>
             <div class="search-wrapper-alt">
-              <SearchComponent {...componentData} />
+              {/* <SearchComponent {...componentData} /> */}
             </div>
           </div>
         </section>
@@ -120,99 +120,6 @@ export default (() => {
             </ul>
           </div>
         </section>
-        {/* <section class="getting-started">
-          <div class="container">
-            <h2 style='font-weight: 500'>Can't decide where to start? We've picked some starter topics to get you going.</h2>
-            <div class="card-row">
-              <a href="/value-alignment">
-                <div class="card">
-                  <p>Value Alignment</p>
-                </div>
-              </a>
-              <a href="/safety-and-robustness">
-                <div class="card">
-                  <p>Safety and Robustness</p>
-                </div>
-              </a>
-              <a href="/Interpretability,-Explainability,-and-Transparency">
-                <div class="card">
-                  <p>Interpretability, Explainability, and Transparency</p>
-                </div>
-              </a>
-              <a href="/Meta-learning,-Transfer-Learning,-and-Generalization">
-                <div class="card">
-                  <p>Meta-learning, Transfer Learning, and Generalization</p>
-                </div>
-              </a>
-            </div>
-            <div class="card-row">
-              <a href="/Ethical-and-Societal-Implications-of-AI">
-                <div class="card">
-                  <p>Ethical and Societal Implications of AI</p>
-                </div>
-              </a>
-              <a href="/AI-Governance-and-Policy">
-                <div class="card">
-                  <p>AI Governance and Policy</p>
-                </div>
-              </a>
-              <a href="/AI-Architectures-and-Training-Methods">
-                <div class="card">
-                  <p>AI Architectures and Training Methods</p>
-                </div>
-              </a>
-              <a href="/Human-AI-Interaction-and-Collaboration">
-                <div class="card">
-                  <p>Human-AI Interaction and Collaboration</p>
-                </div>
-              </a>
-            </div>
-            <div class="card-row">
-              <a href="/Theoretical-Foundations-of-AI">
-                <div class="card">
-                  <p>Theoretical Foundations of AI</p>
-                </div>
-              </a>
-              <a href="/AI-Benchmarks-and-Evaluation">
-                <div class="card">
-                  <p>AI Benchmarks and Evaluation</p>
-                </div>
-              </a>
-              <a href="/AI-Security-and-Privacy">
-                <div class="card">
-                  <p>AI System Design and Governance</p>
-                </div>
-              </a>
-              <a href="/AI-Security-and-Privacy">
-                <div class="card">
-                  <p>AI Security and Privacy</p>
-                </div>
-              </a>
-            </div>
-            <div class="card-row">
-              <a href="/Biological-Inspiration-in-AI">
-                <div class="card">
-                  <p>Biological Inspiration in AI</p>
-                </div>
-              </a>
-              <a href="/Relational-Reasoning">
-                <div class="card">
-                  <p>Relational Reasoning</p>
-                </div>
-              </a>
-              <a href="/AI-Safety-State-Analysis">
-                <div class="card">
-                  <p>AI Safety State Analysis</p>
-                </div>
-              </a>
-              <a href="/verification-and-validation">
-                <div class="card">
-                  <p>Verification and Validation</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section> */}
         <section class="jump-to-basics-content">
           <div class="container">
             <h2>What is AI Safety?</h2>
