@@ -11,7 +11,7 @@ import { FullPageLayout } from "../../cfg"
 import { Argv } from "../../util/ctx"
 import { FilePath, isRelativeURL, joinSegments, pathToRoot } from "../../util/path"
 import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
-import { Content, Landing, Navbar } from "../../components"
+import { Content, Landing, Navbar, About } from "../../components"
 import chalk from "chalk"
 import { write } from "./helpers"
 import DepGraph from "../../depgraph"
@@ -78,6 +78,7 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
         ...right,
         Footer,
         Landing(),
+        About(),
         Navbar(),
       ]
     },

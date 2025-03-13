@@ -14,6 +14,7 @@ import mermaidStyle from "./styles/mermaid.inline.scss"
 import { QuartzPluginData } from "../plugins/vfile"
 import Landing from './Landing'
 import Navbar from "./Navbar"
+import About from "./About"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -240,13 +241,16 @@ export function renderPage(
 
   const NavbarComponent = Navbar()
   const LandingComponent = Landing()
+  const AboutComponent = About()
+
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const doc = (
     <html lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
         {slug === "index" && <LandingComponent {...componentData} />}
-        {slug !== "index" && (
+        {slug === "about" && <AboutComponent {...componentData} />}
+        {slug !== "index" && slug !== 'about' && (
           <div id="quartz-root" className="page">
               <NavbarComponent {...componentData} />
             <Body {...componentData}>

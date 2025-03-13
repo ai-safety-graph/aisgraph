@@ -21,6 +21,7 @@ import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Landing from "./Landing"
+import About from "./About"
 import Navbar from "./Navbar"
 
 export {
@@ -47,5 +48,6 @@ export {
   Breadcrumbs,
   Comments,
   Landing,
+  About,
   Navbar,
 }
