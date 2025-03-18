@@ -38,7 +38,7 @@ export default (() => {
     }
   }
 
-  const SearchComponent = Search()
+  // const SearchComponent = Search()
   const GraphComponent = Graph(customGraphOptions)
   const FooterComponent = Footer()
   const NavbarComponent = Navbar()
@@ -131,7 +131,7 @@ export default (() => {
               </a>
             </div>
           </div>
-          <img src="/AISafetyGraph/static/medicine-crosses.svg" alt="" />
+          <img src="/static/medicine-crosses.svg" alt="" />
         </section>
         <section class="feedback-section" style="display: flex; justify-content: space-between; padding: 4rem 2rem; gap: 20px;">
           <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px;">
