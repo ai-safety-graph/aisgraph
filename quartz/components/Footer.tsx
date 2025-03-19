@@ -13,10 +13,15 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <p>
-          {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
+        <p style="font-size: 0.8rem; color: #636e72; letter-spacing: 0.5px; margin-bottom: 0.5rem;">
+          {/* {i18n(cfg.locale).components.footer.createdWith}{" "}
+          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year} */}
+          Made with ❤️ in London
         </p>
+        <p style="font-size: 0.8rem; color: #636e72; letter-spacing: 0.5px;">
+          © {year} AI Safety Graph
+        </p>
+
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
