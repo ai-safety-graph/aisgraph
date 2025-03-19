@@ -20,7 +20,9 @@ export default(() => {
       }}>
         <div class="container">
           <a href="/">
-          <h1 class="logo" style="font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; font-size: 1.5rem; background: linear-gradient(45deg, #284b63, #84a59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Alignment Graph</h1></a>
+          <div class="logo-container">
+            <img src="/static/logo.svg" style="height: 45px; width: auto" alt="alignment graph logo" />
+          </div></a>
           {/* <div class="nav-search" style="min-width: 400px; max-width: 500px"> */}
           <SearchComponent {...componentData}/>
           {/* </div> */}
