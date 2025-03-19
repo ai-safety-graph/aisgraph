@@ -177,14 +177,14 @@ export default (() => {
             </ul>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "3rem", justifyContent: "center" }}>
-              <a href="/graph" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
+              {/* <a href="/graph" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
                 <div className="cta-button" style={buttonContainerStyle}>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                     <IconGlobe />
                     <p style={buttonLabelStyle}>Explore the Graph</p>
                   </div>
                 </div>
-              </a>
+              </a> */}
               
               <a href="https://discord.gg/skqQ8y4quR" target="_blank" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
                 <div className="cta-button" style={buttonContainerStyle}>
@@ -195,7 +195,7 @@ export default (() => {
                 </div>
               </a>
               
-              <a href="https://github.com/moirage/alignment-research-dataset" target="_blank" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
+              <a href="https://github.com/ai-safety-graph/AISafetyGraph" target="_blank" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
                 <div className="cta-button" style={buttonContainerStyle}>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                     <IconGithub />
@@ -204,14 +204,6 @@ export default (() => {
                 </div>
               </a>
               
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3M7jUr1cmcBUn1wMlHgOFtEs96H1LbHkBgJ58Q3xlnSY_Qw/viewform?usp=header" target="_blank" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
-                <div className="cta-button" style={buttonContainerStyle}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                    <IconMessage />
-                    <p style={buttonLabelStyle}>Give Feedback</p>
-                  </div>
-                </div>
-              </a>
             </div>
           </div>
         </section>
