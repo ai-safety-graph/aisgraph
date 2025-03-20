@@ -243,6 +243,25 @@ body {
   margin-bottom: 2rem;
 }
 
+.cta-button {
+  position: relative;
+  box-shadow: 0 2px 4px rgba(35, 213, 171, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(35, 213, 171, 0.15);
+    
+    .arrow-icon {
+      transform: translateX(4px);
+    }
+  }
+  
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
+}
+
 .footer {
   padding: 3rem 0;
   width: 100%;

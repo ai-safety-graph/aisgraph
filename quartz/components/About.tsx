@@ -154,9 +154,6 @@ export default (() => {
         </section>
         <section class='footer' style="padding: 1rem 0; text-align: center;">
           <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="margin-bottom: 0.5rem; font-size: 0.8rem; color: #636e72; letter-spacing: 0.5px;">
-              Made with ❤️ in London
-            </div>
             <FooterComponent {...componentData} />
           </div>
         </section>

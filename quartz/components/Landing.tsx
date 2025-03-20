@@ -44,6 +44,54 @@ export default (() => {
   const NavbarComponent = Navbar()
 
   function Landing(componentData: QuartzComponentProps) {
+    // SVG icon components for reuse
+    const IconGlobe = () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" style={{ minWidth: "20px" }} fill="none" stroke="#23d5ab" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+    )
+
+    const IconGithub = () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" style={{ minWidth: "20px" }} fill="#23d5ab" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg>
+    )
+
+    const IconDiscord = () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" style={{ minWidth: "20px" }} fill="#23d5ab" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.385-.448.906-.614 1.307a16.69 16.69 0 0 0-4.998 0c-.166-.401-.402-.923-.614-1.307a.077.077 0 0 0-.079-.036c-1.714.29-3.354.8-4.884 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 18.03 18.03 0 0 0 5.419 2.747a.075.075 0 0 0 .081-.035c.447-.61.848-1.254 1.195-1.933a.076.076 0 0 0-.041-.106 11.86 11.86 0 0 1-1.688-.809.077.077 0 0 1-.008-.128 13.44 13.44 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 11.1 11.1 0 0 1-1.688.808.077.077 0 0 0-.041.107c.348.678.749 1.323 1.195 1.932a.076.076 0 0 0 .081.035c1.77-.588 3.435-1.453 5.42-2.746a.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.33c-1.071 0-1.952-.986-1.952-2.195 0-1.21.87-2.195 1.952-2.195 1.091 0 1.968.996 1.952 2.195 0 1.209-.87 2.195-1.952 2.195zm7.214 0c-1.071 0-1.952-.986-1.952-2.195 0-1.21.87-2.195 1.952-2.195 1.091 0 1.968.996 1.952 2.195 0 1.209-.86 2.195-1.952 2.195z" />
+      </svg>
+    )
+
+    const IconMessage = () => (
+      <svg width="20" height="20" viewBox="0 0 24 24" style={{ minWidth: "20px" }} fill="none" stroke="#23d5ab" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+      </svg>
+    )
+
+    // Common button style
+    const buttonContainerStyle = {
+      display: "flex", 
+      alignItems: "center", 
+      justifyContent: "center", 
+      padding: "16px 20px", 
+      height: "62px",
+      borderRadius: "12px", 
+      border: "2px solid #23d5ab", 
+      backgroundColor: "rgba(35, 213, 171, 0.05)", 
+      transition: "all 0.3s ease",
+      position: "relative"
+    }
+
+    const buttonLabelStyle = {
+      color: "#23d5ab", 
+      fontWeight: 600, 
+      fontSize: "1.05rem", 
+      margin: 0
+    }
+
     return (
       <div className='landing-page'>
         <NavbarComponent {...componentData} />
@@ -82,42 +130,81 @@ export default (() => {
         </section>
         <section class='content'>
           <div class="content-container narrow">
-            <h2 style='border-left: solid 3px #23d5c0; padding-left: 10px; font-size: 1.8rem; margin-bottom: 1.5rem;'>How to Use This Site</h2>
-            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.2rem;">Explore the vast landscape of AI Safety topics through our interactive knowledge graph. Our intuitive interface makes navigation simple:</p>
+
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 10px; font-size: 1.8rem; margin-bottom: 1.5rem;'>The Alignment Navigation Problem</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              AI alignment research has grown rapidly, with over <strong>45,000 papers published since 2018</strong>, making it difficult for both newcomers and experienced researchers to navigate the fragmented landscape. Traditional paper databases rely on precise keyword searches, limiting exploratory discovery.
+            </p>
+
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 10px; font-size: 1.8rem; margin-bottom: 1.5rem;'>Our Solution: LLM-Powered Knowledge Graph</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              We've built an interactive knowledge graph that clusters thousands of AI safety papers using advanced Large Language Models (LLMs). Unlike traditional clustering methods, our tool captures nuanced conceptual relationships, creating a semantic map of the research landscape.
+            </p>
             <ul style="list-style-type: none; padding-left: 0; margin-bottom: 2rem;">
               <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
-                <span style="font-size: 1.5rem;">🔍</span>
+                <span style="font-size: 1.5rem;">✨</span>
                 <div>
-                  <strong style="color: #23d5c0;">Zoom</strong>
-                  <p style="margin: 0;">Use your mouse wheel or trackpad to zoom in and out, revealing different levels of detail in the knowledge graph</p>
+                  <strong style="color: #23d5c0;">Semantic Clusters</strong>
+                  <p style="margin: 0;">Discover meaningful topics grouped by advanced language understanding, not just keywords or citations.</p>
                 </div>
               </li>
               <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
-                <span style="font-size: 1.5rem;">🖱️</span>
+                <span style="font-size: 1.5rem;">🕸️</span>
                 <div>
-                  <strong style="color: #23d5c0;">Navigate</strong>
-                  <p style="margin: 0;">Click and drag nodes or the background to pan around and reorganize your view of the network</p>
+                  <strong style="color: #23d5c0;">Interactive Exploration</strong>
+                  <p style="margin: 0;">Visually navigate connections between topics, uncovering hidden insights and related research effortlessly.</p>
                 </div>
               </li>
               <li style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem;">
-                <span style="font-size: 1.5rem;">👆</span>
+                <span style="font-size: 1.5rem;">🚀</span>
                 <div>
-                  <strong style="color: #23d5c0;">Explore</strong>
-                  <p style="margin: 0;">Click on any node to access detailed information and discover connected topics and research</p>
+                  <strong style="color: #23d5c0;">Rapid Orientation</strong>
+                  <p style="margin: 0;">Quickly grasp essential concepts with concise, LLM-generated summaries of key subtopics.</p>
                 </div>
               </li>
             </ul>
-            
-            <h2 style='border-left: solid 3px #23d5c0; padding-left: 10px; font-size: 1.8rem; margin: 2rem 0 1.5rem;'>Getting Started</h2>
-            <div style="background: rgba(35, 213, 192, 0.1); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
-              <p style="font-size: 1.1rem; line-height: 1.6; margin: 0;">New to AI Safety? You're in the right place. Our comprehensive knowledge graph connects over 400 topics from the <a style="color: #23d5ab; text-decoration: underline;" href="https://github.com/moirage/alignment-research-dataset" target="_blank">alignment research dataset</a>, creating an intuitive map of the field. Below, you'll find carefully selected starting points that introduce key concepts and fundamental ideas in AI Safety research.</p>
+
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 10px; font-size: 1.8rem; margin-bottom: 1.5rem;'>Built by the Community, for the Community</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+              Our platform is fully <strong>open-source</strong>, driven by community contributions and feedback. Whether you're a researcher, student, or AI alignment enthusiast, your participation helps shape the future of AI safety navigation.
+            </p>
+
+            <h2 style='border-left: solid 3px #23d5c0; padding-left: 10px; font-size: 1.8rem; margin-bottom: 1.5rem;'>What's Next?</h2>
+            <ul style="font-size: 1.1rem; line-height: 1.6; padding-left: 1.5rem; margin-bottom: 2rem;">
+              <li style="margin-bottom: 0.8rem;">🔍 <strong>Enhanced Visualization:</strong> Improved layouts that highlight emerging research areas and hidden connections.</li>
+              <li style="margin-bottom: 0.8rem;">🧠 <strong>Advanced Clustering:</strong> Refined LLM techniques to provide more accurate and useful topic groupings.</li>
+              <li style="margin-bottom: 0.8rem;">♻️ <strong>Dynamic Updates:</strong> Automated integration of newly published research papers.</li>
+            </ul>
+
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "3rem", justifyContent: "center" }}>
+              {/* <a href="/graph" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
+                <div className="cta-button" style={buttonContainerStyle}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <IconGlobe />
+                    <p style={buttonLabelStyle}>Explore the Graph</p>
+                  </div>
+                </div>
+              </a> */}
+              
+              <a href="https://discord.gg/skqQ8y4quR" target="_blank" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
+                <div className="cta-button" style={buttonContainerStyle}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <IconDiscord />
+                    <p style={buttonLabelStyle}>Join Discord</p>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="https://github.com/ai-safety-graph/AISafetyGraph" target="_blank" style={{ textDecoration: "none", flex: 1, minWidth: "220px", maxWidth: "280px" }}>
+                <div className="cta-button" style={buttonContainerStyle}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <IconGithub />
+                    <p style={buttonLabelStyle}>Contribute</p>
+                  </div>
+                </div>
+              </a>
+              
             </div>
-            <p style="font-size: 1.1rem; line-height: 1.6;">Whether you're a researcher, student, or simply curious about AI Safety, our interactive platform helps you:</p>
-            <ul style="list-style-type: none; padding-left: 0;">
-              <li style="margin-bottom: 0.8rem;">📚 Access curated research papers and resources</li>
-              <li style="margin-bottom: 0.8rem;">🔗 Understand connections between different concepts</li>
-              <li style="margin-bottom: 0.8rem;">🎯 Follow your interests through related topics</li>
-            </ul>
           </div>
         </section>
         <section class="jump-to-basics-content">
@@ -172,9 +259,6 @@ export default (() => {
         </section>
         <section class='footer' style="padding: 1rem 0; text-align: center;">
           <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-            <div style="margin-bottom: 0.5rem; font-size: 0.8rem; color: #636e72; letter-spacing: 0.5px;">
-              Made with ❤️ in London
-            </div>
             <FooterComponent {...componentData} />
           </div>
         </section>
