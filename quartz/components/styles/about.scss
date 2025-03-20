@@ -47,6 +47,7 @@
   min-height: 300px;
   text-align: center;
   transition: transform 0.3s ease;
+  margin: 0 2rem;
 }
 
 .card__content {
@@ -76,6 +77,9 @@
 
 .about-card:hover {
   transform: scale(1.03);
+}
+
+.about-card:hover .card__links {
   cursor: pointer;
 }
 

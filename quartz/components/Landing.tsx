@@ -136,7 +136,7 @@ export default (() => {
         <section class="feedback-section" style="display: flex; justify-content: space-between; padding: 4rem 2rem; gap: 20px;">
           <div class="themed-card" style="flex: 1; padding: 2rem 3rem; border-radius: 12px;">
             <h2 style='border-left: solid 3px #23d5c0; padding-left: 15px; font-size: 1.8rem; margin-bottom: 1.5rem;'>We value your feedback</h2>
-            <p style="line-height: 1.6;">AI Research Graph is a work in progress and we would love to hear from you during any stage of development. We appreciate all kinds of feedback so please don't hesitate to 
+            <p style="line-height: 1.6;">AI Research Graph is a work in progress and we would love to hear from you during any stage of development. We appreciate all kinds of feedback so please don't hesitate to share your thoughts.
               </p> 
             <a style="width: fit-content; display: block; margin-top: 40px;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc3M7jUr1cmcBUn1wMlHgOFtEs96H1LbHkBgJ58Q3xlnSY_Qw/viewform?usp=header">
               <div class="get-started-button" style='border-color: #23d5ab; transition: all 0.2s; hover: {transform: scale(1.02)};'>
